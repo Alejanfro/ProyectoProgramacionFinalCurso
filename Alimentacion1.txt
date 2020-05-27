@@ -1,0 +1,66 @@
+
+			--DIETA CALORICA--
+El idea del programa es que el usuario pueda elegir entre una serie de alimentos introducidos
+previamente en la BBDD y poder conformar asi una ingesta calorica adecuada a los objetivos.
+Se prevera una ingestion calorica para satisfacer las necesidades de una persona media.
+El consumo calorico diario se dividira en tres comidas (desayuno, almuerzo y cena), cada una
+con una estimacion diferente.
+Una vez que el usuario eliga los alimentos que desea consumir ese dia, el programa hara una 
+estimacion calorica y avisara mediante un mensaje si se han cumplido las expectativas 
+(con un cierto grado de tolerancia), o en caso contrario si deberia reducir o aumentar 
+el nivel de ingesta calorica.
+Finalmente el programa imprimira por pantalla la dieta elegida por el usuario asi como la
+ingesta calorica y la distribucion en las diferentes tomas. Con el fin de que el usuario 
+pueda observar los desequilibrios producidos, si los hay.
+
+1.Interfaz: 
+	-Alimentos
+
+2.Clases que implementen alimentos y sean abstractas
+	-Alto nivel calorico  
+	-Bajo nivel calorico
+
+3.Clases que hereden de las abstracta
+	-Grupo 1: Leche y derivados.
+	-Grupo 2: Carnes, pescados y huevos. 
+	-Grupo 3: Patatas, legumbres, frutos secos.
+	-Grupo 4: Verduras y Hortalizas. 
+	-Grupo 5: Frutas. 
+	-Grupo 6: Cereales y derivados, azúcar y dulces. 
+	-Grupo 7: Grasas, aceite y mantequilla.
+
+
+4.Gestion de errores propios
+	-AltoNivelCaloricoException
+	-BajoNivelCaloricoException
+	-AlimentosException
+
+5.Composicion
+	-Diaria
+	-Semanal
+
+6.Insertar y obtener alimentos de la BBDD
+
+7.Usar una interfaz para registrar nuevos alimentos
+
+
+
+
+
+
+
+
+
+
+
+-detectar los parametros restantes para los alimentos
+-crear las clases restantes
+-una vez tengan detectados los parametros crear en la interfaz los metrodo
+-cuando no necesite un parametro, indicarle al metodo que lo inicie a 0 en vez de a null en la BBDD
+
+
+
+
+
+
+
