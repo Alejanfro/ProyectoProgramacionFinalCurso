@@ -16,7 +16,7 @@ import Principal.AltoNivelCalorico;
 public class Grupo1Alto_LecheDerivados extends AltoNivelCalorico{
     private int grasaSaturadas;
     
-    public Grupo1Alto_LecheDerivados(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar) throws AltoNivelCaloricoException, AlimentoException {
+    public Grupo1Alto_LecheDerivados(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar, int grasaSaturadas) throws AltoNivelCaloricoException, AlimentoException {
         super(nombre, energia, grasas, proteinas, carbohidratos, sal, azucar);
         if(grasaSaturadas >= 0){
             this.grasaSaturadas = grasaSaturadas;
@@ -33,6 +33,7 @@ public class Grupo1Alto_LecheDerivados extends AltoNivelCalorico{
         this.grasaSaturadas = grasaSaturadas;
     }
     //cantidadGramos * gramosElementoCalcular) / 100 
+
     public int calcularGrasaSaturadas(int cantidadGramos) {
         return (cantidadGramos * grasaSaturadas) / 100;
     }

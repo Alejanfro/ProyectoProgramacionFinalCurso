@@ -16,7 +16,7 @@ import Principal.BajoNivelCalorico;
 public class Grupo4_VerduraHortalizas extends BajoNivelCalorico {
     private int fibra;
     
-    public Grupo4_VerduraHortalizas(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar) throws BajoNivelCaloricoException, AlimentoException {
+    public Grupo4_VerduraHortalizas(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar, int fibra) throws BajoNivelCaloricoException, AlimentoException {
         super(nombre, energia, grasas, proteinas, carbohidratos, sal, azucar);
         if (fibra >= 0) {
             this.fibra = fibra;

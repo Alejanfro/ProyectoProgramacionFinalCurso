@@ -16,7 +16,7 @@ import Principal.BajoNivelCalorico;
 public class Grupo5Bajo_Frutas extends BajoNivelCalorico {
     private int fibra;
     
-    public Grupo5Bajo_Frutas(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar) throws BajoNivelCaloricoException, AlimentoException {
+    public Grupo5Bajo_Frutas(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar, int fibra) throws BajoNivelCaloricoException, AlimentoException {
         super(nombre, energia, grasas, proteinas, carbohidratos, sal, azucar);
         if (fibra >= 0) {
             this.fibra = fibra;

@@ -24,7 +24,7 @@ public abstract class BajoNivelCalorico implements Alimento {
     private int sal;
     private int azucar;
 
-    /*'¡`+
+    /*
      * @param nombre: nombre del alimento en cuestion
      * @param energia: kilocalorias por cada 100 gramos de alimento
      * @param grasas: gramos de grasa cada 100 gramos de alimento

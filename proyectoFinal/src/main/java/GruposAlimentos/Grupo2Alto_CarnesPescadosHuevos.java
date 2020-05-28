@@ -16,7 +16,7 @@ import Principal.AltoNivelCalorico;
 public class Grupo2Alto_CarnesPescadosHuevos extends AltoNivelCalorico {
     private int grasaSaturadas;
     
-    public Grupo2Alto_CarnesPescadosHuevos(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar) throws AltoNivelCaloricoException, AlimentoException {
+    public Grupo2Alto_CarnesPescadosHuevos(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar, int grasaSaturadas) throws AltoNivelCaloricoException, AlimentoException {
         super(nombre, energia, grasas, proteinas, carbohidratos, sal, azucar);
         if(grasaSaturadas >= 0){
             this.grasaSaturadas = grasaSaturadas;

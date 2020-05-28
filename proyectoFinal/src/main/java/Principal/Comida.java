@@ -9,6 +9,10 @@ package Principal;
  *
  * @author 34650
  */
-public class DietaSemanal {
-    
+public interface Comida {
+    public int getCaloriasPrimero();
+         
+    public int getCaloriasSegundo();
+       
+    public int getCaloriasAcompanante();      
 }

@@ -16,9 +16,9 @@ import Principal.AltoNivelCalorico;
 public class Grupo3Alto_PatatasLegumbresFrutosSecos extends AltoNivelCalorico {
     private int fibra;
     
-    public Grupo3Alto_PatatasLegumbresFrutosSecos(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar) throws AltoNivelCaloricoException, AlimentoException {
+    public Grupo3Alto_PatatasLegumbresFrutosSecos(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar, int fibra) throws AltoNivelCaloricoException, AlimentoException {
         super(nombre, energia, grasas, proteinas, carbohidratos, sal, azucar);  
-           if (fibra >= 0) {
+        if (fibra >= 0) {
             this.fibra = fibra;
         } else {
             throw new AlimentoException("ERROR: Los valores nutricionales no pueden ser negativos");

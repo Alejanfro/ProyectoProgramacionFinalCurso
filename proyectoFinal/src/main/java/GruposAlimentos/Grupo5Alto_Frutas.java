@@ -16,7 +16,7 @@ import Principal.AltoNivelCalorico;
 public class Grupo5Alto_Frutas extends AltoNivelCalorico {
     private int fibra;
 
-    public Grupo5Alto_Frutas(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar) throws AltoNivelCaloricoException, AlimentoException {
+    public Grupo5Alto_Frutas(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar, int fibra) throws AltoNivelCaloricoException, AlimentoException {
         super(nombre, energia, grasas, proteinas, carbohidratos, sal, azucar);
         if (fibra >= 0) {
             this.fibra = fibra;

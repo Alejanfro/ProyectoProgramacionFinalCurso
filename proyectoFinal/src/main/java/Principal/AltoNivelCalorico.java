@@ -149,8 +149,6 @@ public abstract class AltoNivelCalorico implements Alimento {
         return (cantidadGramos * getAzucar()) / 100;
     }
     
-    //public abstract int calcularGrasaSaturadas(int cantidadGramos);
-    
     @Override
     public String toString() {
         return  "ALIMENTO DE ALTO NIVEL CALORICO\n"

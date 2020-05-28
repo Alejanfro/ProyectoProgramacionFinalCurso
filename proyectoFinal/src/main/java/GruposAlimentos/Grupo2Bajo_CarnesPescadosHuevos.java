@@ -16,7 +16,7 @@ import Principal.BajoNivelCalorico;
 public class Grupo2Bajo_CarnesPescadosHuevos extends BajoNivelCalorico {
     private int grasaSaturadas;
     
-    public Grupo2Bajo_CarnesPescadosHuevos(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar) throws BajoNivelCaloricoException, AlimentoException {
+    public Grupo2Bajo_CarnesPescadosHuevos(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar, int grasaSaturadas) throws BajoNivelCaloricoException, AlimentoException {
         super(nombre, energia, grasas, proteinas, carbohidratos, sal, azucar);
         if(grasaSaturadas >= 0){
             this.grasaSaturadas = grasaSaturadas;
