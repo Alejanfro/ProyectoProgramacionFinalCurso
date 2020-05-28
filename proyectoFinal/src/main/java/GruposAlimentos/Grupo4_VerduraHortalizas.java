@@ -5,10 +5,43 @@
  */
 package GruposAlimentos;
 
+import Excepciones.AlimentoException;
+import Excepciones.BajoNivelCaloricoException;
+import Principal.BajoNivelCalorico;
+
 /**
  *
- * @author 34650
+ * @author Alejandro Ríos Díaz
  */
-public class Grupo4_VerduraHortalizas {
+public class Grupo4_VerduraHortalizas extends BajoNivelCalorico {
+    private int fibra;
+    
+    public Grupo4_VerduraHortalizas(String nombre, int energia, int grasas, int proteinas, int carbohidratos, int sal, int azucar) throws BajoNivelCaloricoException, AlimentoException {
+        super(nombre, energia, grasas, proteinas, carbohidratos, sal, azucar);
+        if (fibra >= 0) {
+            this.fibra = fibra;
+        } else {
+            throw new AlimentoException("ERROR: Los valores nutricionales no puedes ser negativos");
+        }
+    }
+
+    public int getFibra() {
+        return fibra;
+    }
+
+    public void setFibra(int fibra) {
+        this.fibra = fibra;
+    }
+    
+    public int calcularFibra(int cantidadGramos){
+        return (cantidadGramos * fibra) / 100;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Fibra: " + fibra + "\n";
+    }
+    
+    
     
 }

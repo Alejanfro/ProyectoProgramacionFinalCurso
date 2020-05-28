@@ -12,7 +12,7 @@ import Excepciones.*;
 
 /**
  *
- * @author 34650
+ * @author Alejandro Ríos Díaz
  */
 public class Grupo7_GrasaAceitesMantequilla extends AltoNivelCalorico {
     private int grasaSaturadas;
@@ -22,7 +22,7 @@ public class Grupo7_GrasaAceitesMantequilla extends AltoNivelCalorico {
         if(grasaSaturadas >= 0){
             this.grasaSaturadas = grasaSaturadas;
         } else {
-            throw new AlimentoException("ERROR: Los valores nutricionales no pueden ser negativos");
+                throw new AlimentoException("ERROR: Los valores nutricionales no pueden ser negativos");
         }
     }   
 
