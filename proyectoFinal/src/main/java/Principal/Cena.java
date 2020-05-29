@@ -20,14 +20,13 @@ public class Cena implements Comida{
     private int gramosAcompanante;
     private int kcalTotales;
 
-    public Cena(BajoNivelCalorico primero, int gramosPrimero, BajoNivelCalorico segundo, int gramosSegundo, BajoNivelCalorico acompanante, int gramosAcompanante, int limiteKcal) throws ComidaException {
+    public Cena(BajoNivelCalorico primero, int gramosPrimero, BajoNivelCalorico segundo, int gramosSegundo, BajoNivelCalorico acompanante, int gramosAcompanante) throws ComidaException {
         if (primero != null && segundo != null && acompanante != null) {
-            if (gramosPrimero >= 0 && gramosSegundo >= 0 && gramosAcompanante >= 0 && limiteKcal > 0) {
+            if (gramosPrimero >= 0 && gramosSegundo >= 0 && gramosAcompanante >= 0) {
                 int kcalPrimero = primero.calcularCalorias(gramosPrimero);
                 int kcalSegundo = segundo.calcularCalorias(gramosSegundo);
                 int kcalAcompante = acompanante.calcularCalorias(gramosAcompanante);
-                int kcalTotales = kcalPrimero + kcalSegundo + kcalAcompante;
-                if (limiteKcal >= kcalTotales) {
+                int kcalTotales = kcalPrimero + kcalSegundo + kcalAcompante;           
                     this.primero = primero;
                     this.gramosPrimero = gramosPrimero;
                     this.segundo = segundo;
@@ -41,9 +40,6 @@ public class Cena implements Comida{
             } else {
                 throw new ComidaException("ERROR: Valores negativos en argumentos");
             }
-        } else {
-            throw new ComidaException("ERROR: No puede dejar ninguna comida vacía");
-        }
     }
 
     public BajoNivelCalorico getPrimero() {
@@ -117,10 +113,47 @@ public class Cena implements Comida{
        return acompanante.calcularCalorias(gramosAcompanante);
     }
     
-    @Override
+            @Override
     public String toString() {
-        return "Cena\n"+ "------------\n" + "Primero: " + primero + "   gramosPrimero = " + gramosPrimero + "\n" + "Segundo: " + segundo + "    gramosSegundo=" + gramosSegundo + "\n" + "Acompanante = " + acompanante + "   gramosAcompanante = " + gramosAcompanante + "\n" + "kcalTotalesDesayuno = " + kcalTotales + "\n";
+        return "\n"     
+             + "CENA\n"
+             + "----\n" + "\n"
+             + "--Primero-- " + primero.getNombre() + "\n"         
+             + "-Por racion- " + gramosPrimero + " gramos" + "\n"  
+             + "Kcal Primero: " + primero.calcularCalorias(gramosPrimero) + "\n"
+             + "Grasa Primero: "  + primero.calcularGrasas(gramosPrimero) + "\n"
+             + "Proteinas Primero: " + primero.calcularProteinas(gramosPrimero) + "\n"
+             + "Carbohidratos Primero: " + primero.caluclarCarbohidratos(gramosPrimero) + "\n"
+             + "Sal Primero: " + primero.calcularSal(gramosPrimero) + "\n"
+             + "Azucar Primero: " + primero.calcularSal(gramosPrimero) + "\n"
+             + "Grasas saturadas Primero: " + primero.calcularGrasaSaturadas(gramosPrimero)+ "\n" 
+             + "Fibra Primero: " + primero.calcularFibra(gramosPrimero)+ "\n" 
+                
+             + "\n"
+             + "--Segundo-- " + segundo.getNombre() + "\n"         
+             + "-Por racion- " + gramosSegundo + " gramos" + "\n"  
+             + "Kcal Segundo: " + segundo.calcularCalorias(gramosSegundo) + "\n"
+             + "Grasa Segundo: "  + segundo.calcularGrasas(gramosSegundo) + "\n"
+             + "Proteinas Segundo: " + segundo.calcularProteinas(gramosSegundo) + "\n"
+             + "Carbohidratos Segundo: " + segundo.caluclarCarbohidratos(gramosSegundo) + "\n"
+             + "Sal Segundo: " + segundo.calcularSal(gramosSegundo) + "\n"
+             + "Azucar Segundo: " + segundo.calcularSal(gramosSegundo) + "\n"
+             + "Grasas saturadas Segundo: " + segundo.calcularGrasaSaturadas(gramosSegundo)+ "\n" 
+             + "Fibra Segundo: " + segundo.calcularFibra(gramosSegundo)+ "\n" 
+                
+             + "\n" 
+            + "--Acompañante-- " + acompanante.getNombre() + "\n"         
+             + "-Por racion- " + gramosAcompanante + " gramos" + "\n"  
+             + "Kcal Acompañante: " + acompanante.calcularCalorias(gramosAcompanante) + "\n"
+             + "Grasa Acompañante: "  + acompanante.calcularGrasas(gramosAcompanante) + "\n"
+             + "Proteinas Acompañante: " + acompanante.calcularProteinas(gramosAcompanante) + "\n"
+             + "Carbohidratos Acompañante: " + acompanante.caluclarCarbohidratos(gramosAcompanante) + "\n"
+             + "Sal Acompañante: " + acompanante.calcularSal(gramosAcompanante) + "\n"
+             + "Azucar Acompañante: " + acompanante.calcularSal(gramosAcompanante) + "\n"
+             + "Grasas saturadas Acompañante: " + acompanante.calcularGrasaSaturadas(gramosAcompanante)+ "\n" 
+             + "Fibra Acompañante: " + acompanante.calcularFibra(gramosAcompanante)+ "\n" 
+                
+             + "\n"
+             + "kcalTotales = " + kcalTotales + "\n";
     }
-    
-    
 }

@@ -21,8 +21,8 @@ public abstract class BajoNivelCalorico implements Alimento {
     private int grasas;
     private int proteinas;
     private int carbohidratos;
-    private int sal;
-    private int azucar;
+    private float sal;
+    private float azucar;
 
     /*
      * @param nombre: nombre del alimento en cuestion
@@ -103,19 +103,19 @@ public abstract class BajoNivelCalorico implements Alimento {
         this.carbohidratos = carbohidratos;
     }
 
-    public int getSal() {
+    public float getSal() {
         return sal;
     }
 
-    public void setSal(int sal) {
+    public void setSal(float sal) {
         this.sal = sal;
     }
 
-    public int getAzucar() {
+    public float getAzucar() {
         return azucar;
     }
 
-    public void setAzucar(int azucar) {
+    public void setAzucar(float azucar) {
         this.azucar = azucar;
     }
     
@@ -139,15 +139,17 @@ public abstract class BajoNivelCalorico implements Alimento {
         return (cantidadGramos * getCarbohidratos()) / 100;
     }
 
-    @Override
-    public int calcularSal(int cantidadGramos) {
-        return (cantidadGramos * getSal()) / 100;    
+    public float calcularSal(int cantidadGramos) {
+        return (cantidadGramos * getSal() / 100);    
     }
 
-    @Override
-    public int calcularAzucar(int cantidadGramos) {
-        return (cantidadGramos * getAzucar()) / 100;
+    public float calcularAzucar(int cantidadGramos) {
+        return (cantidadGramos * getAzucar() / 100);
     }
+    
+    public abstract int calcularGrasaSaturadas(int cantidadGramos);
+    
+    public abstract int calcularFibra(int cantidadGramos);
 
     @Override
     public String toString() {

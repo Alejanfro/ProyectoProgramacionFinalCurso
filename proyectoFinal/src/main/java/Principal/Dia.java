@@ -38,12 +38,12 @@ public class Dia {
     public String toString() {
         return  "COMIDAS A REALIZAR AL DÍA" 
                 + "\n-------------------------\n"
-                + "DESAYUNO\n" + desayuno 
-                + "\n-------------------------\n"
-                + "ALMUERZO\n" + almuerzo 
-                + "\n-------------------------\n"
-                + "CENA\n" + cena 
-                + "\n-------------------------\n"
+                + desayuno 
+                + "-------------------------\n"
+                + almuerzo 
+                + "-------------------------\n"
+                + cena 
+                + "-------------------------\n"
                 + "ESTE DÍA TIENE UNA ENERGIA DE " + KcalTotales + "KCAL\n";
     }
 }

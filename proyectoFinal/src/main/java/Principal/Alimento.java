@@ -21,7 +21,7 @@ public interface Alimento {
     
     public int caluclarCarbohidratos (int cantidadGramos);
     
-    public int calcularSal (int cantidadGramos);
+    public float calcularSal (int cantidadGramos);
     
-    public int calcularAzucar (int cantidadGramos);
+    public float calcularAzucar (int cantidadGramos);
 }

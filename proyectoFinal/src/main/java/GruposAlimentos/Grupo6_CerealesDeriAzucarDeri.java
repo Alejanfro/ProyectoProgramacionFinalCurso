@@ -33,6 +33,12 @@ public class Grupo6_CerealesDeriAzucarDeri extends AltoNivelCalorico {
         this.fibra = fibra;
     }
     
+    @Override
+    public int calcularGrasaSaturadas(int cantidadGramos) {
+        return 0;
+    }
+    
+    @Override
     public int calcularFibra(int cantidadGramos){
         return (cantidadGramos * fibra) / 100;
     }

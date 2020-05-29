@@ -33,6 +33,12 @@ public class Grupo4_VerduraHortalizas extends BajoNivelCalorico {
         this.fibra = fibra;
     }
     
+    @Override
+    public int calcularGrasaSaturadas(int cantidadGramos) {
+        return 0;
+    }
+    
+    @Override
     public int calcularFibra(int cantidadGramos){
         return (cantidadGramos * fibra) / 100;
     }

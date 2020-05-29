@@ -34,8 +34,14 @@ public class Grupo7_GrasaAceitesMantequilla extends AltoNivelCalorico {
         this.grasaSaturadas = grasaSaturadas;
     }
     //cantidadGramos * gramosElementoCalcular) / 100 
+    @Override
     public int calcularGrasaSaturadas(int cantidadGramos) {
         return (cantidadGramos * grasaSaturadas) / 100;
+    }
+    
+    @Override
+    public int calcularFibra(int cantidadGramos) {
+        return 0;
     }
     
     @Override

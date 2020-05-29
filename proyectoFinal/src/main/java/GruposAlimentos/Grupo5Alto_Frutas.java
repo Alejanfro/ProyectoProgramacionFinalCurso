@@ -32,10 +32,16 @@ public class Grupo5Alto_Frutas extends AltoNivelCalorico {
     public void setFibra(int fibra) {
         this.fibra = fibra;
     }
+    
+    @Override
+    public int calcularGrasaSaturadas(int cantidadGramos) {
+        return 0;
+    }
 
+    @Override
     public int calcularFibra (int cantidadGramos){
         return (cantidadGramos * fibra) / 100;
-}
+    }
 
     @Override
     public String toString() {

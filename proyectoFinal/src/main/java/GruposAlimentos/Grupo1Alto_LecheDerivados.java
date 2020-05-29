@@ -34,13 +34,21 @@ public class Grupo1Alto_LecheDerivados extends AltoNivelCalorico{
     }
     //cantidadGramos * gramosElementoCalcular) / 100 
 
+    @Override
     public int calcularGrasaSaturadas(int cantidadGramos) {
         return (cantidadGramos * grasaSaturadas) / 100;
     }
     
     @Override
-    public String toString() {
-        return super.toString()+ "Grasas saturadas: " + grasaSaturadas + "\n";
+    public int calcularFibra(int cantidadGramos) {
+        return 0;
     }
     
+    @Override
+    public String toString() {
+        return super.toString()+ "Grasas saturadas: " + grasaSaturadas + "\n";
+    }  
+
+
+
 }

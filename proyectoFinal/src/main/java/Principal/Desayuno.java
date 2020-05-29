@@ -116,11 +116,46 @@ public class Desayuno implements Comida{
 
     @Override
     public String toString() {
-        return "Desayuno\n"+ "------------\n" 
-             + "Primero: " + primero + "   gramosPrimero = " + gramosPrimero 
-             + "\n" + "Segundo: " + segundo + "    gramosSegundo=" + gramosSegundo 
-             + "\n" + "Acompanante = " + acompanante + "   gramosAcompanante = " + gramosAcompanante + "\n" 
-             + "kcalTotalesDesayuno = " + kcalTotales + "\n";
+        return "\n"      
+             + "DESAYUNO\n"
+             + "--------\n" + "\n"
+             + "--Primero-- " + primero.getNombre() + "\n"         
+             + "-Por racion- " + gramosPrimero + " gramos" + "\n"  
+             + "Kcal Primero: " + primero.calcularCalorias(gramosPrimero) + "\n"
+             + "Grasa Primero: "  + primero.calcularGrasas(gramosPrimero) + "\n"
+             + "Proteinas Primero: " + primero.calcularProteinas(gramosPrimero) + "\n"
+             + "Carbohidratos Primero: " + primero.caluclarCarbohidratos(gramosPrimero) + "\n"
+             + "Sal Primero: " + primero.calcularSal(gramosPrimero) + "\n"
+             + "Azucar Primero: " + primero.calcularSal(gramosPrimero) + "\n"
+             + "Grasas saturadas Primero: " + primero.calcularGrasaSaturadas(gramosPrimero)+ "\n" 
+             + "Fibra Primero: " + primero.calcularFibra(gramosPrimero)+ "\n" 
+                
+             + "\n" 
+             + "--Segundo-- " + segundo.getNombre() + "\n"         
+             + "-Por racion- " + gramosSegundo + " gramos" + "\n"  
+             + "Kcal Segundo: " + segundo.calcularCalorias(gramosSegundo) + "\n"
+             + "Grasa Segundo: "  + segundo.calcularGrasas(gramosSegundo) + "\n"
+             + "Proteinas Segundo: " + segundo.calcularProteinas(gramosSegundo) + "\n"
+             + "Carbohidratos Segundo: " + segundo.caluclarCarbohidratos(gramosSegundo) + "\n"
+             + "Sal Segundo: " + segundo.calcularSal(gramosSegundo) + "\n"
+             + "Azucar Segundo: " + segundo.calcularSal(gramosSegundo) + "\n"
+             + "Grasas saturadas Segundo: " + segundo.calcularGrasaSaturadas(gramosSegundo)+ "\n" 
+             + "Fibra Segundo: " + segundo.calcularFibra(gramosSegundo)+ "\n" 
+                
+             + "\n" 
+             + "--Acompañante-- " + acompanante.getNombre() + "\n"         
+             + "-Por racion- " + gramosAcompanante + " gramos" + "\n"  
+             + "Kcal Acompañante: " + acompanante.calcularCalorias(gramosAcompanante) + "\n"
+             + "Grasa Acompañante: "  + acompanante.calcularGrasas(gramosAcompanante) + "\n"
+             + "Proteinas Acompañante: " + acompanante.calcularProteinas(gramosAcompanante) + "\n"
+             + "Carbohidratos Acompañante: " + acompanante.caluclarCarbohidratos(gramosAcompanante) + "\n"
+             + "Sal Acompañante: " + acompanante.calcularSal(gramosAcompanante) + "\n"
+             + "Azucar Acompañante: " + acompanante.calcularSal(gramosAcompanante) + "\n"
+             + "Grasas saturadas Acompañante: " + acompanante.calcularGrasaSaturadas(gramosAcompanante)+ "\n" 
+             + "Fibra Acompañante: " + acompanante.calcularFibra(gramosAcompanante)+ "\n"  
+                
+             + "\n"
+             + "kcalTotales = " + kcalTotales + "\n";
     }
     
     

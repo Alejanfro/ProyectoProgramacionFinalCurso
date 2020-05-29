@@ -33,7 +33,13 @@ public class Grupo5Bajo_Frutas extends BajoNivelCalorico {
         this.fibra = fibra;
     }
     
-    public int calcularFibra (int cantidadGramos){
+    @Override
+    public int calcularGrasaSaturadas(int cantidadGramos) {
+        return 0;
+    }
+    
+    @Override
+    public int calcularFibra(int cantidadGramos){
         return (cantidadGramos * fibra) / 100;
     }
 

@@ -33,8 +33,13 @@ public class Grupo1Bajo_LecheDerivados extends BajoNivelCalorico {
         this.grasaSaturadas = grasaSaturadas;
     }
     //cantidadGramos * gramosElementoCalcular) / 100 
+    @Override
     public int calcularGrasaSaturadas(int cantidadGramos) {
         return (cantidadGramos * grasaSaturadas) / 100;
+    }
+    
+    public int calcularFibra(int cantidadGramos) {
+        return 0;
     }
     
     @Override
