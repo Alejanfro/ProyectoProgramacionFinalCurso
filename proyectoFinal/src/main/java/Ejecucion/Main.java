@@ -46,17 +46,23 @@ public class Main {
      */
     public static void main(String[] args) throws SQLException, AltoNivelCaloricoException, AlimentoException, BajoNivelCaloricoException, ComidaException {
 
-        String url = "jdbc:mysql://127.0.0.1:3306/COMESANO;?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+        String url = "jdbc:mysql://127.0.0.1:3306/COMESANO?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
         String usuario = "root";
         String password = "ale";
         try {
             //Los dos primeros pasos son siempre los mismos
             //Creamos la conexion con DriverManager a la BD que queramos
-            ///Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/institutos1?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "usuario");
             Connection con = DriverManager.getConnection(url, usuario, password);
             //Creamos el Statement a partir de la conexion, nos permitirá lanzar adelante las sentencias sql
             Statement smt = (Statement) con.createStatement();
-/*
+             ResultSet rs = smt.executeQuery("select * from Alimento");//Mediante este metodo selecionamos la tabla
+            int nfilas=smt.executeUpdate("insert into Alimento values ('" + "pan"+"','" + "Alto"+"'," + 
+                    10+","+ 5+","+ 150+","+ 1+","+ 1+","+ 5+","+
+                    4+","+12+","+4+")");
+            
+            
+/*                                                                 
+
             Scanner sc = new Scanner(System.in);
             int r = -1;
 
@@ -92,6 +98,7 @@ public class Main {
             System.out.println("Gracias por utilizar nuestra aplicación. Hasta la próxima.");
 
             smt.close();
+            rs.close();
             con.close();
         } catch (Exception ex) {
             ex.printStackTrace();

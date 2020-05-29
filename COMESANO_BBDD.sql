@@ -3,13 +3,10 @@ create database COMESANO;
 
 USE COMESANO;
 
-
-
-
 create table Alimento (
-nombre character primary key,
-nivel character,
-grupo character,
+nombre character(20) primary key,
+nivel character(20),
+grupo character(20),
 energia int,
 grasas int,
 proteinas int,
@@ -22,6 +19,9 @@ fibra int
 
 
 
+
+
+select * from Alimento;
 
 
 
