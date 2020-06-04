@@ -155,11 +155,7 @@ public class Ventana extends JFrame {
         return alimento;
     }
     /*
-    Alimento alA = new GrupoXA();
-    Alimento alB = new GrupoXB();
-    AltoNivelCalorico anc = (AltoNivelCalorico) alA;
-    */
-    /*
+
     * Metodo privado 
     * @param 
     */
