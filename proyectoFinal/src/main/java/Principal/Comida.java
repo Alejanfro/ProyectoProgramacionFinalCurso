@@ -1,18 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Principal;
 
 /**
- *
- * @author 34650
+ * Clase interface usada para implementar metodos a las clases Desayuno, Almuerzo y Cena
+ * @author Alejandro Ríos Díaz
  */
 public interface Comida {
+    
+    /*
+    * Metodo para calcular las calorias que tiene el primer alimento 
+    * @param sin parametros
+    */
     public int getCaloriasPrimero();
          
+    /*
+    * Metodo para calcular las calorias que tiene el segundo alimento 
+    * @param sin parametros
+    */
     public int getCaloriasSegundo();
        
+    /*
+    * Metodo para calcular las calorias que tiene el tercer alimento 
+    * @param sin parametros
+    */
     public int getCaloriasAcompanante();      
 }
